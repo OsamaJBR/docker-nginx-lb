@@ -1,0 +1,6 @@
+[template]
+src = "http_lb.conf.tmpl"
+dest = "/etc/nginx/conf.d/http_lb.conf"
+owner = "root"
+mode = "0644"
+keys = ["/elb/"]

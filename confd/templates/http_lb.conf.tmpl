@@ -1,0 +1,11 @@
+upstream backend {
+    {{ getv "/lb/algo" }}
+    {{ getv "/lb/servers"}}
+}
+
+server {
+    listen {{getv "/lb/port"}};
+    location / {
+        proxy_pass http://backend;
+    }
+}
