@@ -1,6 +1,6 @@
 upstream backend {
     {{ getv "/lb/algo" }}
-    {{ getv "/lb/servers"}}
+    {{ getv "/lb/upstreams"}}
 }
 
 server {
